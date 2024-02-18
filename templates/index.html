@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>☕ CoffeeCompass</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="brown-bar">
+        <img src="{{ url_for('static', filename='images/header_icon.png') }}" alt="Header Icon" class="header-icon">
+    </div>
+
+    <div class="content-container">
+        <div class="image-content">
+            <div class="image-gallery">
+                <div class="featured-images">
+                    <a href="https://www.vervecoffee.com/" target="_blank">
+                        <img id="featured-image" src="/static/images/featured_cafe.png" alt="Featured Cafe Image">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+            <div class="image-grid">
+                <h2>Favorite Cafes</h2>
+                <div class="favorite-images">
+                    {% for image in favorite_images %}
+                        <img src="{{ url_for('static', filename='images/faves/' + image) }}" alt="Favorite Cafe Image">
+                    {% endfor %}
+                </div>
+
+                <h2>By Category</h2>
+                <div class="category-images">
+                    {% for image in category_images %}
+                        <img src="{{ url_for('static', filename='images/category/' + image) }}" alt="Category Cafe Image">
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        
+        <div class="chatbot-container">
+            <div class="chat-container">
+                <div class="chatbot-message">Hello Tree! Let's talk ☕</div>
+            </div>
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

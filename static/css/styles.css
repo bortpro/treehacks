@@ -1,0 +1,184 @@
+/* styles.css */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: beige; /* Set background color to beige for the entire page */
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif; /* Apply Open Sans font to h2 elements */
+}
+
+
+.brown-bar {
+    background-color: #8B4513; /* Brown color for the brown bar */
+    height: 50px; /* Set the height of the brown bar */
+    text-align: center; /* Center the text within the brown bar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-icon {
+    max-height: 40px; /* Set the maximum height of the header icon */
+    max-width: 100%; /* Set the maximum width of the header icon */
+}
+
+.image-gallery {
+    text-align: center;
+    padding: 20px;
+    max-height:140px;
+    background-color: beige; /* Set background color to beige for the image gallery */
+}
+
+.image-grid {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    padding: 10px;
+    margin: 0 auto; /* Center the grid container horizontally */
+    background-color: beige; /* Set background color to beige for the image grid */
+}
+
+.image-grid h2 {
+    grid-column: 1 / -1;
+}
+
+.favorite-images h2,
+.category-images h2 {
+    text-align: center; /* Center the text */
+}
+
+.featured-images img {
+    max-width: 50%;
+    height: auto;
+    max-height: 180px; /* Set maximum height for the images */
+}
+
+.featured-images img.active {
+    display: block;
+}
+
+.favorite-images,
+.category-images {
+    display: flex; /* Use flexbox to align images horizontally */
+    justify-content: center; /* Center images along the main axis */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    white-space: nowrap; /* Prevent images from wrapping */
+    background-color: beige; /* Set background color to beige for the image containers */
+}
+
+.favorite-images img,
+.category-images img {
+    flex-shrink: 0; /* Prevent images from shrinking */
+    max-width: 80%; /* Adjust the width of the images as needed */
+    height: auto;
+    max-height: 250px; /* Set maximum height for the images */
+    margin: 5px; /* Add some space between images */
+}
+
+.chatbot-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    max-height: 400px; /* Set maximum height for the chat container */
+    background-color: #f9f9f9; /* Off-white background color for the chatbot container */
+    padding: 20px;
+    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.1); /* Add a shadow to the chatbot container */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; /* Hide overflow to prevent resizing */
+}
+
+.chat-container {
+    flex: 1 1 auto; /* Allow the chat container to grow to fill available space */
+    overflow-y: auto; /* Allow vertical scrolling in the chat container */
+    /*margin-bottom: 200px; /* Add margin at the bottom to prevent overlapping with input */
+}
+
+
+.chatbot-message {
+    background-color: #f6b26b; /* Light gray background color for the chatbot messages */
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.user-message {
+    background-color: #4CAF50; /* Lighter gray background color for the user messages */
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.chat-input {
+    margin-top: 10px;
+}
+
+.chat-input input {
+    width: calc(100% - 60px); /* Set the width of the input field */
+    padding: 5px;
+    margin-right: 5px;
+    border: 1px solid #ccc; /* Add a border to the input field */
+}
+
+.chat-input button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #4CAF50 !important; /* Green color for the send button */
+    color: white;
+    cursor: pointer;
+    border-radius: 5px; /* Add some border-radius to make it more stylish */
+}
+
+.chat-input button:hover {
+    background-color: #45a049 !important; /* Darker green color on hover for the send button */
+}
+
+.chat-input input {
+    width: calc(100% - 60px); /* Set the width of the input field */
+    padding: 10px; /* Increase the padding to make it taller */
+    margin-right: 5px;
+    border: 1px solid #ccc; /* Add a border to the input field */
+    border-radius: 20px; /* Add some border-radius to make it more fun */
+    background-color: #f6f6f6; /* Light gray background color */
+    font-size: 16px; /* Increase the font size */
+}
+
+
+#send-button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #4CAF50; /* Green color for the send button */
+    color: white;
+    cursor: pointer;
+    border-radius: 5px; /* Add some border-radius to make it more stylish */
+    width: 66.66%; /* Set the width to 2/3 of the container width */
+    margin: 0 auto; /* Center the button horizontally */
+}
+
+#send-button:hover {
+    background-color: #45a049; /* Darker green color on hover for the send button */
+}
+
+#user-input {
+    width: 90%; /* Set the width of the input field */
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-right: 5px;
+    border: 1px solid #ccc; /* Add a border to the input field */
+    border-radius: 20px; /* Add some border-radius to make it more fun */
+    background-color: #f9f9f9; /* Off-white background color */
+    margin-bottom: 10px;
+}
+
+.chatbot-message,
+.user-message {
+    font-size: 16px; /* Set the font size for chatbot and user messages */
+}
+
+
